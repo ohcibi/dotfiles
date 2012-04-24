@@ -46,6 +46,15 @@ alias la='ll -a'
 alias df='df -h'
 alias du='du -h'
 
+#bundler aliases
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bil="bi --local"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
+alias berg='be rails g'
+
 export PATH=$PATH
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
