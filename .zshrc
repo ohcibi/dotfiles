@@ -55,6 +55,14 @@ alias be="b exec"
 alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 alias berg='be rails g'
 
+#bindkey for history search and delete char
+bindkey '\e[3~' delete-char
+bindkey '' history-incremental-search-backward
+
+#bindkey for bol and eol
+bindkey '\e[7~' beginning-of-line
+bindkey '\e[8~' end-of-line
+
 export PATH=$PATH
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
