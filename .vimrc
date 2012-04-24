@@ -12,6 +12,7 @@ set incsearch
 set lbr
 set laststatus=2
 set hidden
+set modeline
 
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
