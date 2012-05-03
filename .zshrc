@@ -54,6 +54,7 @@ alias bu="b update"
 alias be="b exec"
 alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 alias berg='be rails g'
+alias bec='be cucumber'
 
 #bindkey for history search and delete char
 bindkey '\e[3~' delete-char
