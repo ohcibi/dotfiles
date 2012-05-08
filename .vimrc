@@ -13,6 +13,7 @@ set lbr
 set laststatus=2
 set hidden
 set modeline
+set wildignore+=vendor/ruby/**,tmp/**,log/**
 
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
