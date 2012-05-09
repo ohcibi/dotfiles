@@ -53,7 +53,11 @@ alias bil="bi --local"
 alias bu="b update"
 alias be="b exec"
 alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
-alias berg='be rails g'
+alias ber='be rails'
+alias berg='ber g'
+alias bers='ber s'
+alias berc='ber c'
+alias bercs='berc --sandbox'
 alias bec='be cucumber'
 
 #bindkey for history search and delete char
