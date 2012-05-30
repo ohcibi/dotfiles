@@ -20,6 +20,8 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+set foldmethod=indent
+
 " tabs
 set tabstop=2
 set shiftwidth=2
