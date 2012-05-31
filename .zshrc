@@ -70,4 +70,6 @@ bindkey '\e[8~' end-of-line
 
 export PATH=$PATH
 
+unset RUBYOPT
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
