@@ -88,5 +88,7 @@ noremap <C-J> :wincmd j<CR>
 noremap <C-K> :wincmd k<CR>
 noremap <C-L> :wincmd l<CR>
 
+map <leader>a :A<cr>
+
 noremap <leader>r :!rspec %<cr>
 nmap <leader>R :!rspec spec<CR>
