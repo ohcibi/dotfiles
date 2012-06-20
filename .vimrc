@@ -55,7 +55,7 @@ set wildignore+=vendor/ruby/**,tmp/**,log/**,*.git
 autocmd BufEnter *.thtml,*.ctp set syntax=php
 autocmd BufEnter *.js.ctp set syntax=javascript
 
-au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru,Guardfile} set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru,Guardfile,*.rb} set ft=ruby
 
 " make and python use real tabs
 au FileType make set noexpandtab
