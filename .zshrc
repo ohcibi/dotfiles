@@ -68,8 +68,6 @@ bindkey '' history-incremental-search-backward
 bindkey '\e[7~' beginning-of-line
 bindkey '\e[8~' end-of-line
 
-export PATH=$PATH
+path=(~/bin ~/local/bin $path)
 
 unset RUBYOPT
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
