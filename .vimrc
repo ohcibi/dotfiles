@@ -92,3 +92,6 @@ map <leader>a :A<cr>
 
 noremap <leader>r :!bundle exec rspec %<cr>
 nmap <leader>R :!bundle exec rspec spec<CR>
+
+" force git to use english instead of german when used with fugitive
+let g:fugitive_git_executable = 'LANG=en git'
