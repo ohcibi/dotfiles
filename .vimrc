@@ -90,5 +90,5 @@ noremap <C-L> :wincmd l<CR>
 
 map <leader>a :A<cr>
 
-noremap <leader>r :!rspec %<cr>
-nmap <leader>R :!rspec spec<CR>
+noremap <leader>r :!bundle exec rspec %<cr>
+nmap <leader>R :!bundle exec rspec spec<CR>
