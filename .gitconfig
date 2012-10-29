@@ -1,0 +1,42 @@
+[color]
+	ui = auto
+[push]
+	default = matching
+[user]
+	email = tobias.witt@hhu.de
+	name = Tobias Witt
+[pull]
+	default = matching
+[alias]
+	co = checkout
+  #Log display from screencast, with train tracks.
+  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  # Alternate log display from Scott Chacon
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+
+  r = !git l -20
+  ra = !git r --all
+  # Other useful aliases:
+  unstage = reset HEAD
+  staged = diff --cached
+  unstaged = diff
+  current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+  # Usage: git track origin/feature-123-login-form
+  track = checkout -t
+	s = status
+	st = status
+  staus = status
+  stats = status
+  statsu = status
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 1916x1054+1920+22
+	history-view-vpane-position = 508
+	file-view-vpane-position = 749
+	main-window-view = FileView
+[core]
+	excludesfile = ~/.gitignore_global
+[github]
+	user = ohcibi
+[merge]
+	tool = vimdiff
