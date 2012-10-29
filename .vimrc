@@ -54,8 +54,10 @@ set wildignore+=vendor/ruby/**,tmp/**,log/**,*.git
 " syntax
 autocmd BufEnter *.thtml,*.ctp set syntax=php
 autocmd BufEnter *.js.ctp set syntax=javascript
+autocmd BufEnter *.eco set filetype=eco
 
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru,Guardfile,*.rb} set ft=ruby
+au BufRead,BufNewFile {*.yml} set ft=yaml
 
 " make and python use real tabs
 au FileType make set noexpandtab
@@ -74,7 +76,7 @@ colorscheme solarized
 " mappings
 nmap <Tab> :bn<CR>
 map <S-Tab> :bp<CR>
-nmap  :CommandT<CR>
+noremap ,t :CommandT<CR>
 nmap n nzz
 nmap N Nzz
 
@@ -88,10 +90,11 @@ noremap <C-J> :wincmd j<CR>
 noremap <C-K> :wincmd k<CR>
 noremap <C-L> :wincmd l<CR>
 
+noremap <C-c> :BD<CR>
+
+noremap <leader>c :CoffeeCompile vert<CR>
+
 map <leader>a :A<cr>
 
 noremap <leader>r :!bundle exec rspec %<cr>
 nmap <leader>R :!bundle exec rspec spec<CR>
-
-" force git to use english instead of german when used with fugitive
-let g:fugitive_git_executable = 'LANG=en git'
