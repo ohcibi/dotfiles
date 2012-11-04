@@ -22,7 +22,7 @@ function git_head() {
 
 export ZSH_THEME_GIT_PROMPT_PREFIX="$c_git"
 export ZSH_THEME_GIT_PROMPT_SUFFIX="$def"
-export ZSH_THEME_GIT_PROMPT_DIRTY="$def$green*$def"
+export ZSH_THEME_GIT_PROMPT_DIRTY="$def$green✗$def"
 export ZSH_THEME_GIT_PROMPT_CLEAN=""
 export ZSH_THEME_GIT_PROMPT_UNTRACKED="$red??$def "
 export ZSH_THEME_GIT_PROMPT_ADDED="$green"A"$def "
@@ -38,7 +38,7 @@ function git_info() {
 }
 
 function prompt_char {
-	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo $; fi
+	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo ➜; fi
 }
 
 last_cmd="%(?,$green*,$red!!)$def"
