@@ -47,7 +47,7 @@ alias df='df -h'
 alias du='du -h'
 
 #bundler aliases
-alias b="bundle"
+alias b="nocorrect bundle"
 alias bi="b install --path vendor"
 alias bil="bi --local"
 alias bu="b update"
@@ -60,6 +60,9 @@ alias berc='ber c'
 alias bercs='berc --sandbox'
 alias bec='be cucumber'
 
+#nocorrect aliases
+alias sudo='nocorrect sudo'
+
 #bindkey for history search and delete char
 bindkey '\e[3~' delete-char
 bindkey '' history-incremental-search-backward
@@ -68,6 +71,6 @@ bindkey '' history-incremental-search-backward
 bindkey '\e[7~' beginning-of-line
 bindkey '\e[8~' end-of-line
 
-export PATH=$PATH
+path=(~/bin ~/local/bin $path)
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+unset RUBYOPT
