@@ -67,11 +67,7 @@ au FileType python set noexpandtab
 let b:Tex_SmartQuoteOpen = '"`'
 let b:Tex_SmartQuoteClose = "\"'"
 
-let g:solarized_termcolors=256    "default value is 16
-"let g:solarized_termtrans=1
-set t_Co=256
 colorscheme solarized
-
 
 " mappings
 nmap <Tab> :bn<CR>
