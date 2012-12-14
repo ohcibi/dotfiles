@@ -1,7 +1,7 @@
 cyan="%{$fg[cyan]%}"
 blue="%{$fg[blue]%}"
-dark_grey="%{$fg_bold[cyan]%}" 
-grey="%{$fg_bold[yellow]%}" 
+dark_grey="%{$fg_bold[cyan]%}"
+grey="%{$fg_bold[yellow]%}"
 gold="%{$fg[yellow]%}"
 dark_green="%{$fg_bold[green]%}"
 green="%{$fg[green]%}"
@@ -20,16 +20,16 @@ function git_head() {
   fi
 }
 
-export ZSH_THEME_GIT_PROMPT_PREFIX="$c_git"
-export ZSH_THEME_GIT_PROMPT_SUFFIX="$def"
-export ZSH_THEME_GIT_PROMPT_DIRTY="$def$green*$def"
-export ZSH_THEME_GIT_PROMPT_CLEAN=""
-export ZSH_THEME_GIT_PROMPT_UNTRACKED="$red??$def "
-export ZSH_THEME_GIT_PROMPT_ADDED="$green"A"$def "
-export ZSH_THEME_GIT_PROMPT_MODIFIED="$gold"M"$def "
-export ZSH_THEME_GIT_PROMPT_RENAMED="$green"R"$def "
-export ZSH_THEME_GIT_PROMPT_DELETED="$red"D"$def "
-export ZSH_THEME_GIT_PROMPT_UNMERGED="$red"UU"$def "
+ZSH_THEME_GIT_PROMPT_PREFIX="$c_git"
+ZSH_THEME_GIT_PROMPT_SUFFIX="$def"
+ZSH_THEME_GIT_PROMPT_DIRTY="$def$dark_green✗$def"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+ZSH_THEME_GIT_PROMPT_UNTRACKED="$red??$def "
+ZSH_THEME_GIT_PROMPT_ADDED="$green"A"$def "
+ZSH_THEME_GIT_PROMPT_MODIFIED="$gold"M"$def "
+ZSH_THEME_GIT_PROMPT_RENAMED="$green"R"$def "
+ZSH_THEME_GIT_PROMPT_DELETED="$red"D"$def "
+ZSH_THEME_GIT_PROMPT_UNMERGED="$red"UU"$def "
 
 function git_info() {
   if [[ -n $(git_prompt_info) ]]; then
@@ -41,7 +41,7 @@ function prompt_char {
 	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo $; fi
 }
 
-last_cmd="%(?,$green*,$red!!)$def"
+last_cmd="%(?,$green✔,$red✗)$def"
 user_host="$c_user%n$def@$c_host%m$def"
 disp_pwd="$c_pwd%~$def"
 if which rvm-prompt &> /dev/null; then
