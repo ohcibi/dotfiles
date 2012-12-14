@@ -94,3 +94,22 @@ map <leader>a :A<cr>
 
 noremap <leader>r :!bundle exec rspec %<cr>
 nmap <leader>R :!bundle exec rspec spec<CR>
+
+set mouse=a
+set backup
+set undofile                "so is persistent undo ...
+set undodir=$HOME/.vim/undo//
+set undolevels=1000         "maximum number of changes that can be undone
+set undoreload=10000        "maximum number lines to save for undo on a buffer reload
+set backupdir=$HOME/.vim/backup//
+set directory=$HOME/.vim/swap//
+set viewdir=$HOME/.vim/views//
+
+silent execute '!mkdir -p $HOME/.vim/backup'
+silent execute '!mkdir -p $HOME/.vim/swap'
+silent execute '!mkdir -p $HOME/.vim/views'
+silent execute '!mkdir -p $HOME/.vim/undo'
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview
+
+let g:neocomplcache_enable_at_startup = 1
