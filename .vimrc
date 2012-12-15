@@ -1,6 +1,10 @@
-" pathogen
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible
+filetype off
+
+" vundle
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+source $HOME/.vim/bundlerc
 
 syntax on
 filetype plugin indent on
@@ -16,7 +20,6 @@ set lbr
 set laststatus=2
 set hidden
 set modeline
-set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -113,3 +116,6 @@ au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
 let g:neocomplcache_enable_at_startup = 1
+
+hi IndentGuidesOdd ctermbg=white
+hi IndentGuidesEven ctermbg=lightgrey
