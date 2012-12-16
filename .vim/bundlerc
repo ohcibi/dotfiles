@@ -1,0 +1,43 @@
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-rails'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neosnippet'
+Bundle 'honza/snipmate-snippets'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'myusuf3/numbers.vim'
+
+Bundle 'scrooloose/syntastic'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'godlygeek/tabular'
+
+Bundle 'leshill/vim-json'
+Bundle 'pangloss/vim-javascript'
+Bundle 'briancollins/vim-jst'
+Bundle 'kchmck/vim-coffee-script'
+
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'cakebaker/scss-syntax.vim'
+
+Bundle 'ervandew/supertab'
+
+Bundle 'nathanaelkane/vim-indent-guides'
+
+Bundle 'Lokaltog/vim-powerline'
+
+Bundle 'html5.vim'
+Bundle 'bufkill.vim'
+Bundle 'LustyJuggler'
+Bundle 'gnupg.vim'
+
+Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
