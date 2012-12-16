@@ -98,6 +98,9 @@ map <leader>a :A<cr>
 noremap <leader>r :!bundle exec rspec %<cr>
 nmap <leader>R :!bundle exec rspec spec<CR>
 
+" NERDTree
+noremap <C-N> :NERDTree<CR>
+
 set mouse=a
 set backup
 set undofile                "so is persistent undo ...
@@ -119,3 +122,10 @@ let g:neocomplcache_enable_at_startup = 1
 
 hi IndentGuidesOdd ctermbg=white
 hi IndentGuidesEven ctermbg=lightgrey
+
+function! StartNerdTreeIfProject()
+  if isdirectory(".git") || filereadable(".project")
+    NERDTree
+  endif
+endfunction
+au VimEnter * call StartNerdTreeIfProject()
