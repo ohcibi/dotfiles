@@ -1,6 +1,10 @@
-" pathogen
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible
+filetype off
+
+" vundle
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+source $HOME/.vim/bundlerc
 
 syntax on
 filetype plugin indent on
@@ -16,7 +20,6 @@ set lbr
 set laststatus=2
 set hidden
 set modeline
-set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -69,7 +72,6 @@ let b:Tex_SmartQuoteClose = "\"'"
 
 colorscheme solarized
 
-
 " mappings
 nmap <Tab> :bn<CR>
 map <S-Tab> :bp<CR>
@@ -95,3 +97,35 @@ map <leader>a :A<cr>
 
 noremap <leader>r :!bundle exec rspec %<cr>
 nmap <leader>R :!bundle exec rspec spec<CR>
+
+" NERDTree
+noremap <C-N> :NERDTree<CR>
+
+set mouse=a
+set backup
+set undofile                "so is persistent undo ...
+set undodir=$HOME/.vim/undo//
+set undolevels=1000         "maximum number of changes that can be undone
+set undoreload=10000        "maximum number lines to save for undo on a buffer reload
+set backupdir=$HOME/.vim/backup//
+set directory=$HOME/.vim/swap//
+set viewdir=$HOME/.vim/views//
+
+silent execute '!mkdir -p $HOME/.vim/backup'
+silent execute '!mkdir -p $HOME/.vim/swap'
+silent execute '!mkdir -p $HOME/.vim/views'
+silent execute '!mkdir -p $HOME/.vim/undo'
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview
+
+let g:neocomplcache_enable_at_startup = 1
+
+hi IndentGuidesOdd ctermbg=white
+hi IndentGuidesEven ctermbg=lightgrey
+
+function! StartNerdTreeIfProject()
+  if isdirectory(".git") || filereadable(".project")
+    NERDTree
+  endif
+endfunction
+au VimEnter * call StartNerdTreeIfProject()
