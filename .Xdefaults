@@ -2,11 +2,12 @@ Xcursor.theme: Neutral_Plus
 URxvt.saveLines: 10000
 URxvt.scrollBar: false
 URxvt.secondaryScroll: true
+URxvt.secondaryWheel: true
 URxvt.perl-ext-common: matcher
 URxvt.matcher.button: 1
 URxvt.matcher.pattern: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 URxvt.cursorBlink: true
-URxvt.urlLauncher: opera
+URxvt.urlLauncher: chromium
 URxvt.tabbed.tabbar-fg: 15 
 URxvt.tabbed.tabbar-bg: 4 
 URxvt.tabbed.tab-fg: 0 
