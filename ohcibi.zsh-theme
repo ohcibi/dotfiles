@@ -38,7 +38,7 @@ function git_info() {
 }
 
 function prompt_char {
-	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo $; fi
+	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo ➜; fi
 }
 
 last_cmd="%(?,$green✔,$red✗)$def"
