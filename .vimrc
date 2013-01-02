@@ -124,7 +124,7 @@ hi IndentGuidesOdd ctermbg=white
 hi IndentGuidesEven ctermbg=lightgrey
 
 function! StartNerdTreeIfProject()
-  if isdirectory(".git") || filereadable(".project")
+  if !&diff && (isdirectory(".git") || filereadable(".project"))
     NERDTree
   endif
 endfunction
