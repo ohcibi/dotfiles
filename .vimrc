@@ -71,11 +71,11 @@ let b:Tex_SmartQuoteOpen = '"`'
 let b:Tex_SmartQuoteClose = "\"'"
 
 colorscheme solarized
+highlight Comment cterm=italic
 
 " mappings
 nmap <Tab> :bn<CR>
 map <S-Tab> :bp<CR>
-noremap ,t :CommandT<CR>
 nmap n nzz
 nmap N Nzz
 
