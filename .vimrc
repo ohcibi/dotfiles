@@ -138,3 +138,8 @@ au VimEnter * call StartNerdTreeIfProject()
 
 " don't display a preview window for completion support
 set completeopt-=preview
+
+" FUGITIVE commands
+command! Gci Gcommit --verbose
+command! Gds Git diff --staged
+command! Gca Gcommit --amend
