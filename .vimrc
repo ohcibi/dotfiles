@@ -101,6 +101,12 @@ nmap <leader>R :!bundle exec rspec spec<CR>
 " NERDTree
 noremap <C-N> :NERDTree<CR>
 
+" CTRLP
+noremap <c-b> :CtrlPBuffer<cr>
+
+"convenience
+noremap <cr> :nohlsearch<cr>
+
 set mouse=a
 set backup
 set undofile                "so is persistent undo ...
@@ -129,3 +135,6 @@ function! StartNerdTreeIfProject()
   endif
 endfunction
 au VimEnter * call StartNerdTreeIfProject()
+
+" don't display a preview window for completion support
+set completeopt-=preview
