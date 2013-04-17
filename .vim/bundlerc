@@ -41,6 +41,8 @@ Bundle 'nono/vim-handlebars'
 
 Bundle 'adimit/prolog.vim'
 
+Bundle 'mhinz/vim-signify'
+
 Bundle 'html5.vim'
 Bundle 'bufkill.vim'
 Bundle 'LustyJuggler'
