@@ -42,6 +42,7 @@ Bundle 'nono/vim-handlebars'
 Bundle 'adimit/prolog.vim'
 
 Bundle 'mhinz/vim-signify'
+Bundle 'derekwyatt/vim-scala'
 
 Bundle 'html5.vim'
 Bundle 'bufkill.vim'
