@@ -1,0 +1,6 @@
+keycode  47 = braceleft odiaeresis Odiaeresis odiaeresis Odiaeresis dead_doubleacute dead_belowdot dead_doubleacute
+keycode  48 = braceright adiaeresis Adiaeresis adiaeresis Adiaeresis dead_circumflex dead_caron dead_circumflex
+
+! maps caps lock to escape
+remove Lock = Caps_Lock
+keysym Caps_Lock = Escape
