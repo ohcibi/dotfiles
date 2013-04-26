@@ -51,8 +51,8 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
-" command-t
-set wildignore+=vendor/ruby/**,tmp/**,log/**,*.git
+" wildignore
+set wildignore+=*/vendor/ruby/**,*/node_modules/**,*/tmp/**,*/log/**,*.git,*.swp,*.zip,*.gz,*.bz2
 
 " syntax
 autocmd BufEnter *.thtml,*.ctp set syntax=php
