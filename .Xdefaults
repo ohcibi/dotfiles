@@ -1,22 +1,26 @@
-Xcursor.theme: Neutral_Plus
-URxvt.saveLines: 10000
-URxvt.scrollBar: false
-URxvt.secondaryScroll: true
-URxvt.secondaryWheel: true
-URxvt.perl-ext-common: matcher
-URxvt.matcher.button: 1
-URxvt.matcher.pattern: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
-URxvt.cursorBlink: true
-URxvt.urlLauncher: chromium
-URxvt.tabbed.tabbar-fg: 15 
-URxvt.tabbed.tabbar-bg: 4 
-URxvt.tabbed.tab-fg: 0 
-URxvt.tabbed.tab-bg: 6  
-*font: xft:Monospace:pixelsize=13:antialias=true:hinting=true
-*boldFont: xft:Monospace:bold:pixelsize=13:antialias=true:hinting=true
-URxvt.depth: 32
-URxvt.boldMode: false
-URxvt.loginShell: true
+Xcursor.theme          : Neutral_Plus
+URxvt.saveLines        : 10000
+URxvt.scrollBar        : false
+URxvt.secondaryScroll  : true
+URxvt.secondaryWheel   : true
+URxvt.perl-ext-common  : default,matcher,tabbed
+URxvt.matcher.button   : 1
+URxvt.matcher.pattern  : \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+URxvt.colorUL          : #4682B4
+URxvt.cursorBlink      : true
+URxvt.url-launcher     : /usr/bin/chromium
+URxvt.tabbed.tabbar-fg : 4
+URxvt.tabbed.tabbar-bg : 15
+URxvt.tabbed.tab-fg    : 6
+URxvt.tabbed.tab-bg    : 7
+URxvt.font             : xft:Monospace:pixelsize=14:antialias=true:hinting=true
+URxvt.boldFont         : xft:Monospace:bold:pixelsize=14:antialias=true:hinting=true
+URxvt.italicFont       : xft:Monospace:italic:autohint=true:pixelsize=14:antialias=true
+URxvt.boldItalicFont   : xft:Monospace:bold:italic:autohint=true:pixelsize=14:antialias=true
+URxvt.depth            : 32
+URxvt.boldMode         : false
+URxvt.loginShell       : true
+URxvt.intensityStyles  : false
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
