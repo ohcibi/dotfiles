@@ -1,12 +1,12 @@
 [color]
 	ui = auto
 [push]
-	default = matching
+	default = simple
 [user]
 	email = tobias.witt@hhu.de
 	name = Tobias Witt
 [pull]
-	default = matching
+	default = simple
 [alias]
 	co = checkout
   #Log display from screencast, with train tracks.
