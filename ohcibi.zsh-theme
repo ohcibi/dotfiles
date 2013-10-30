@@ -34,7 +34,14 @@ ZSH_THEME_GIT_PROMPT_UNMERGED="$red"UU"$def "
 
 function git_info() {
   if [[ -n $(git_prompt_info) ]]; then
-    echo "[$(git_prompt_status)$c_git$(git_prompt_info)$def$gold@$(git_prompt_short_sha)$def] "
+    prompt="$(git_prompt_status)$c_git$(git_prompt_info)$def$gold@$(git_prompt_short_sha)$def"
+
+    stashes=$(git stash list 2>/dev/null | wc -l | sed -e 's/ *//')
+    if [[ $stashes > 0 ]]; then
+      prompt="$prompt $grey($stashes stashed)$def"
+    fi
+
+    echo "[$prompt] "
   fi
 }
 
