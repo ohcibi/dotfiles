@@ -6,6 +6,7 @@ gold="%{$fg[yellow]%}"
 dark_green="%{$fg_bold[green]%}"
 green="%{$fg[green]%}"
 orange="%{$fg_bold[red]%}"
+lambda="%F{166}"
 red="%{$fg[red]%}"
 def="%{$reset_color%}"
 c_user=$gold
@@ -38,7 +39,7 @@ function git_info() {
 }
 
 function prompt_char {
-	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo ➜; fi
+	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo %{$lambda%}λ%{$reset_color%}; fi
 }
 
 last_cmd="%(?,$green✔,$red✗)$def"
