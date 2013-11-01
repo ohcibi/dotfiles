@@ -206,3 +206,16 @@ if has('conceal')
 endif
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" rainbow paranthesis always on
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" clojure
+nmap cx :Eval<cr>
+
+"highlight parenthesis
+hi boldFaced cterm=bold term=bold gui=bold
+match boldFaced /[()\[\]{}]/
