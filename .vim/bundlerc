@@ -8,10 +8,13 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-vinegar'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neosnippet-snippets'
 Bundle 'honza/vim-snippets'
+Bundle 'honza/vim-clojure-conceal'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
@@ -42,6 +45,7 @@ Bundle 'nono/vim-handlebars'
 Bundle 'adimit/prolog.vim'
 
 Bundle 'mhinz/vim-signify'
+
 Bundle 'derekwyatt/vim-scala'
 
 Bundle 'html5.vim'
@@ -50,3 +54,12 @@ Bundle 'LustyJuggler'
 Bundle 'gnupg.vim'
 
 Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
+
+Bundle 'guns/vim-clojure-static'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
+Bundle 'vim-scripts/paredit.vim'
+
+Bundle 'kien/rainbow_parentheses.vim'
+
+Bundle 'suan/vim-instant-markdown'

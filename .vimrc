@@ -219,3 +219,15 @@ nmap cx :Eval<cr>
 "highlight parenthesis
 hi boldFaced cterm=bold term=bold gui=bold
 match boldFaced /[()\[\]{}]/
+
+
+" text editing
+au BufEnter *.md,*.markdown,*.txt,*.tex,*.latex set textwidth=100
+au BufEnter *.md,*.markdown,*.txt,*.tex,*.latex set spelllang=de
+au BufEnter *.md,*.markdown,*.txt,*.tex,*.latex set spell
+
+" gradle == groovy
+au BufEnter *.gradle set ft=groovy
+
+" enable conceal in all modes except insert mode
+set concealcursor=nvc
