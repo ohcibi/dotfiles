@@ -36,7 +36,6 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git vi-mode)
 
-source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #
@@ -74,3 +73,4 @@ bindkey '\e[8~' end-of-line
 path=(~/bin ~/local/bin $path)
 
 unset RUBYOPT
+source $ZSH/oh-my-zsh.sh
