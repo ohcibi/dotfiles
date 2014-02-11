@@ -6,7 +6,6 @@ gold="%{$fg[yellow]%}"
 dark_green="%{$fg_bold[green]%}"
 green="%{$fg[green]%}"
 orange="%{$fg_bold[red]%}"
-lambda="%F{166}"
 red="%{$fg[red]%}"
 def="%{$reset_color%}"
 c_user=$gold
@@ -21,20 +20,22 @@ function git_head() {
   fi
 }
 
-ZSH_THEME_GIT_PROMPT_PREFIX="$c_git"
-ZSH_THEME_GIT_PROMPT_SUFFIX="$def"
-ZSH_THEME_GIT_PROMPT_DIRTY="$def$dark_green✗$def"
+ZSH_THEME_GIT_PROMPT_PREFIX="%F{1}%B"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%F{3}@%b"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%F{3}%B"
+ZSH_THEME_GIT_PROMPT_SHA_AFTER="%b"
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{2}%B✖%b "
 ZSH_THEME_GIT_PROMPT_CLEAN=""
-ZSH_THEME_GIT_PROMPT_UNTRACKED="$red??$def "
-ZSH_THEME_GIT_PROMPT_ADDED="$green"A"$def "
-ZSH_THEME_GIT_PROMPT_MODIFIED="$gold"M"$def "
-ZSH_THEME_GIT_PROMPT_RENAMED="$green"R"$def "
-ZSH_THEME_GIT_PROMPT_DELETED="$red"D"$def "
-ZSH_THEME_GIT_PROMPT_UNMERGED="$red"UU"$def "
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{9}%B✸%b "
+ZSH_THEME_GIT_PROMPT_ADDED="%F{2}%B✚%b "
+ZSH_THEME_GIT_PROMPT_MODIFIED="%F{3}✂%b "
+ZSH_THEME_GIT_PROMPT_RENAMED="%F{2}✎R%b "
+ZSH_THEME_GIT_PROMPT_DELETED="%F{1}%B✝%b "
+ZSH_THEME_GIT_PROMPT_UNMERGED="%F{9}%B❣%b "
 
 function git_info() {
   if [[ -n $(git_prompt_info) ]]; then
-    prompt="$(git_prompt_status)$c_git$(git_prompt_info)$def$gold@$(git_prompt_short_sha)$def"
+    prompt="$(parse_git_dirty)$(git_prompt_status)$(git_prompt_info)$(git_prompt_short_sha)"
 
     stashes=$(git stash list 2>/dev/null | wc -l | sed -e 's/ *//')
     if [[ $stashes > 0 ]]; then
@@ -46,7 +47,7 @@ function git_info() {
 }
 
 function prompt_char {
-	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo %{$lambda%}λ%{$reset_color%}; fi
+	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo "%F{9}%Bλ%b"; fi
 }
 
 last_cmd="%(?,$green✔,$red✗)$def"
@@ -60,6 +61,6 @@ else
   fi
 fi
 PROMPT="$last_cmd [$disp_pwd] \$(git_info)[$disp_rvm]
-$c_host%m$def $(prompt_char) "
+%F{10}%B%m%b $(prompt_char) "
 
 RPROMPT="$green"["$c_user%n$def $green- %*"]"$def"
