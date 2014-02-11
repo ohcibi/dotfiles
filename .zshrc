@@ -40,25 +40,7 @@ plugins=(git vi-mode)
 # Customize to your needs...
 #
 # some custom aliases
-[[ "$TERM" != "dumb" ]] && alias ls='ls --color=auto -h'
-alias la='ll -a'
-alias df='df -h'
-alias du='du -h'
-
-#bundler aliases
-alias b="nocorrect bundle"
-alias bi="b install --path vendor"
-alias bil="bi --local"
-alias bu="b update"
-alias be="b exec"
-alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
-alias ber='be rails'
-alias berg='ber g'
-alias bers='ber s'
-alias berc='ber c'
-alias bercs='berc --sandbox'
-alias bec='be cucumber'
-
+source ~/.aliases
 #nocorrect aliases
 alias sudo='nocorrect sudo'
 
