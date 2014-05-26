@@ -2,12 +2,13 @@ set nocompatible
 filetype off
 
 " vundle
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 source $HOME/.vim/bundlerc
+call vundle#end()
 
-syntax on
 filetype plugin indent on
+syntax on
 set grepprg="grep -nH $*"
 
 let mapleader=","
@@ -30,7 +31,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set list listchars=tab:→·,trail:·
+set list listchars=tab:→\ ,trail:·
 
 " search
 set incsearch
@@ -51,8 +52,8 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
-" wildignore
-set wildignore+=*/vendor/ruby/**,*/node_modules/**,*/tmp/**,*/log/**,*.git,*.swp,*.zip,*.gz,*.bz2
+" command-t
+set wildignore+=*/vendor/ruby/*,*/tmp/*,*/log/*,*/.git/*,*/node_modules/*,*/bower_components/*,*.swp,*.zip,*.gz,*.bz2
 
 " syntax
 autocmd BufEnter *.thtml,*.ctp set syntax=php
@@ -64,7 +65,6 @@ au BufRead,BufNewFile {*.yml} set ft=yaml
 
 " make and python use real tabs
 au FileType make set noexpandtab
-au FileType python set noexpandtab
 
 " define quotes used by latex suite
 let b:Tex_SmartQuoteOpen = '"`'
@@ -78,11 +78,6 @@ nmap <Tab> :bn<CR>
 map <S-Tab> :bp<CR>
 nmap n nzz
 nmap N Nzz
-
-nmap h :vertical resize -1<CR>
-nmap l :vertical resize +1<CR>
-nmap j :resize -1<CR>
-nmap k :resize +1<CR>
 
 noremap <C-H> :wincmd h<CR>
 noremap <C-J> :wincmd j<CR>
@@ -98,8 +93,8 @@ map <leader>a :A<cr>
 noremap <leader>r :!bundle exec rspec %<cr>
 nmap <leader>R :!bundle exec rspec spec<CR>
 
-" NERDTree
-noremap <C-N> :NERDTree<CR>
+
+vmap <leader>t :Tabularize /
 
 " CTRLP
 noremap <c-b> :CtrlPBuffer<cr>
@@ -124,20 +119,10 @@ silent execute '!mkdir -p $HOME/.vim/undo'
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
-let g:neocomplcache_enable_at_startup = 1
+let g:neocomplete#enable_at_startup = 1
 
 hi IndentGuidesOdd ctermbg=white
 hi IndentGuidesEven ctermbg=lightgrey
-
-function! StartNerdTreeIfProject()
-  if !&diff && (isdirectory(".git") || filereadable(".project"))
-    NERDTree
-  endif
-endfunction
-au VimEnter * call StartNerdTreeIfProject()
-
-" don't display a preview window for completion support
-set completeopt-=preview
 
 " FUGITIVE commands
 command! Gci Gcommit --verbose
@@ -233,3 +218,20 @@ set concealcursor=nvc
 
 " Enable jshint for syntastic
 let g:syntastic_javascript_checkers = ['jshint']
+
+" emmet-vim mapping
+nmap <leader>h <c-y>,
+imap <c-z>, <c-y>,
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" disable parent dir search for rope
+let g:pymode_rope_lookup_project = 0
+
+" pymode python
+let g:pymode_python = 'python3'
