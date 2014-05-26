@@ -34,7 +34,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode)
+plugins=(git vi-mode battery)
 
 
 # Customize to your needs...
@@ -44,15 +44,22 @@ source ~/.aliases
 #nocorrect aliases
 alias sudo='nocorrect sudo'
 
+PATH=$HOME/.rvm/bin:$PATH
+
+source $ZSH/oh-my-zsh.sh
+
 #bindkey for history search and delete char
-bindkey '\e[3~' delete-char
-bindkey '' history-incremental-search-backward
+bindkey "\e[3~" delete-char
+bindkey "^R" history-incremental-search-backward
 
 #bindkey for bol and eol
-bindkey '\e[7~' beginning-of-line
-bindkey '\e[8~' end-of-line
+bindkey "\e[7~" beginning-of-line
+bindkey "\e[8~" end-of-line
+
 
 path=(~/bin ~/local/bin $path)
 
 unset RUBYOPT
-source $ZSH/oh-my-zsh.sh
+
+
+doge
