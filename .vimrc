@@ -238,3 +238,5 @@ let g:pymode_rope_lookup_project = 0
 
 " pymode python
 let g:pymode_python = 'python3'
+
+au Syntax gitcommit set foldmethod=manual
