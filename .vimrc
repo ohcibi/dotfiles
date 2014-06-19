@@ -53,7 +53,8 @@ vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
 " command-t
-set wildignore+=*/vendor/ruby/*,*/tmp/*,*/log/*,*/.git/*,*/node_modules/*,*/bower_components/*,*.swp,*.zip,*.gz,*.bz2
+set wildignore+=*.zip,*.gz,*.bz2,*.xz,*.class
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|(vendor\/ruby|tmp|log|node_modules|bower_components))$'
 
 " syntax
 autocmd BufEnter *.thtml,*.ctp set syntax=php
@@ -70,7 +71,7 @@ au FileType make set noexpandtab
 let b:Tex_SmartQuoteOpen = '"`'
 let b:Tex_SmartQuoteClose = "\"'"
 
-colorscheme solarized
+colorscheme tidy
 highlight Comment cterm=italic
 
 " mappings
@@ -78,6 +79,8 @@ nmap <Tab> :bn<CR>
 map <S-Tab> :bp<CR>
 nmap n nzz
 nmap N Nzz
+
+noremap <c-o> :!open %<cr>
 
 noremap <C-H> :wincmd h<CR>
 noremap <C-J> :wincmd j<CR>
