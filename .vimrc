@@ -124,8 +124,8 @@ au BufWinEnter * silent! loadview
 
 let g:neocomplete#enable_at_startup = 1
 
-hi IndentGuidesOdd ctermbg=white
-hi IndentGuidesEven ctermbg=lightgrey
+hi IndentGuidesOdd ctermbg=white guibg=white
+hi IndentGuidesEven ctermbg=lightgrey guibg=lightgrey
 
 " FUGITIVE commands
 command! Gci Gcommit --verbose
