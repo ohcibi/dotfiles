@@ -30,6 +30,9 @@
   staus = status
   stats = status
   statsu = status
+	lga = log --graph --decorate --all
+	d = diff
+	ds = diff --staged
 [giggle]
 	main-window-maximized = false
 	main-window-geometry = 1916x1054+1920+22
@@ -38,6 +41,7 @@
 	main-window-view = FileView
 [core]
 	excludesfile = ~/.gitignore_global
+	editor = mvim -f
 [github]
 	user = ohcibi
 [merge]
