@@ -2,3 +2,9 @@
 ~*
 *~
 /tags
+.DS_Store
+.dropbox
+.ropeproject
+__pycache__
+.~
+*.py[cod]
